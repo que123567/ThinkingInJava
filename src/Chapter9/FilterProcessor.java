@@ -9,7 +9,6 @@ package Chapter9;
 interface Processor
 {
     String name();
-
     Object process(Object input);
 }
 
@@ -36,9 +35,9 @@ public class FilterProcessor
 {
     public static void main(String[] args) {
         Waveform waveform = new Waveform();
-        Apply.procee(new FilterAdapter(new LowPass(1.0)),waveform);
-        Apply.procee(new FilterAdapter(new HighPass(1.0)),waveform);
-        Apply.procee(new FilterAdapter(new BandPass(1.0,2.0)),waveform);
+        Apply.procee(new FilterAdapter(new LowPass(1.0)), waveform);
+        Apply.procee(new FilterAdapter(new HighPass(1.0)), waveform);
+        Apply.procee(new FilterAdapter(new BandPass(1.0, 2.0)), waveform);
     }
 
 }

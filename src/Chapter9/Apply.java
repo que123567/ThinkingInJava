@@ -45,7 +45,8 @@ public class Apply
     public static void procee(Processor p, Object s) {
         System.out.println(p.process(s));
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
 //    procee(new Upcase(),s);
 //    procee(new Downcase(),s);
 //    procee(new Splitter(),s);
