@@ -16,30 +16,26 @@ class Processors//书中本为Processor，但是书中有重名接口为Processo
     }
 }
 
-class Upcase extends Processors
-{
+class Upcase extends Processors {
     String process(Object input) {
         return ((String) input).toUpperCase();
     }
 }
 
-class Downcase extends Processors
-{
+class Downcase extends Processors {
     String process(Object input) {
         return ((String) input).toLowerCase();
     }
 }
 
-class Splitter extends Processors
-{
+class Splitter extends Processors {
     Object process(Object input) {
         return Arrays.toString(((String) input).split(" "));
     }
 }
 
 
-public class Apply
-{
+public class Apply {
     private static String s = "we are the world.";
 
     public static void procee(Processor p, Object s) {

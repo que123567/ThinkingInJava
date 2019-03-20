@@ -10,8 +10,7 @@ import java.util.Set;
  * Created by smaug on 2017/4/29.
  * 组合 转发
  */
-public class ForwardingSet<E> implements Set<E>
-{
+public class ForwardingSet<E> implements Set<E> {
     private final Set<E> s;
 
     public ForwardingSet(Set<E> s) {

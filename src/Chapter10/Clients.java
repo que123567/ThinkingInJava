@@ -3,8 +3,7 @@ package Chapter10;
 /**
  * Created by smaug on 2017/5/8.
  */
-public class Clients
-{
+public class Clients {
     private static int[] int2Array(int a) {
         String b = a + "";
         int[] result = new int[b.length()];

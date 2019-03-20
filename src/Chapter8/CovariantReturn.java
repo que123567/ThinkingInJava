@@ -2,39 +2,34 @@ package Chapter8;
 
 /**
  * Created by smaug on 2017/5/2.
- 协变返回类型 允许返回更具体的类型
+ * 协变返回类型 允许返回更具体的类型
  */
-class Grain
-{
+class Grain {
     public String toString() {
         return "Grain";
     }
 }
 
-class Wheat extends Grain
-{
+class Wheat extends Grain {
     public String toString() {
         return "Wheat";
     }
 }
 
-class Mill
-{
+class Mill {
     Grain process() {
         return new Grain();
     }
 }
 
-class WheatMill extends Mill
-{
+class WheatMill extends Mill {
     Wheat process() {
         return new Wheat();
     }
 }
 
 
-public class CovariantReturn
-{
+public class CovariantReturn {
     public static void main(String[] args) {
         Mill m = new Mill();
         Grain g = m.process();

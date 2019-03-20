@@ -7,16 +7,14 @@ import java.util.Iterator;
 /**
  * Created by smaug on 2017/7/14.
  */
-public class IterableClass implements Iterable<String>
-{
+public class IterableClass implements Iterable<String> {
 
     String[] words = ("And that is" + " " + "we know").split(" ");
 
     @NotNull
     @Override
     public Iterator<String> iterator() {
-        return new Iterator<String>()
-        {
+        return new Iterator<String>() {
             private int index = 0;
 
             @Override

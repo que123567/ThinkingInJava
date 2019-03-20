@@ -3,8 +3,7 @@ package Chapter9;
 /**
  * Created by smaug on 2017/5/3.
  */
-public class Waveform
-{
+public class Waveform {
     private static long counter;
     private final long id = counter++;
 
@@ -13,8 +12,7 @@ public class Waveform
     }
 }
 
-class Filters
-{
+class Filters {
     public String name() {
         return getClass().getSimpleName();
     }
@@ -24,8 +22,7 @@ class Filters
     }
 }
 
-class LowPass extends Filters
-{
+class LowPass extends Filters {
     double cutoff;
 
     public LowPass(double cutoff) {
@@ -37,8 +34,7 @@ class LowPass extends Filters
     }
 }
 
-class HighPass extends Filters
-{
+class HighPass extends Filters {
     double cutoff;
 
     public HighPass(double cutoff) {
@@ -50,8 +46,7 @@ class HighPass extends Filters
     }
 }
 
-class BandPass extends Filters
-{
+class BandPass extends Filters {
     double lowCutoff, highCutoff;
 
     public BandPass(double lowCutoff, double highCutoff) {

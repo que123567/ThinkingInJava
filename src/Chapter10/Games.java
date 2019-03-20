@@ -3,18 +3,15 @@ package Chapter10;
 /**
  * Created by smaug on 2017/5/6.
  */
-interface Game
-{
+interface Game {
     boolean move();
 }
 
-interface GameFactory
-{
+interface GameFactory {
     Game getGame();
 }
 
-class Checkers implements Game
-{
+class Checkers implements Game {
     public Checkers() {
     }
 
@@ -27,8 +24,7 @@ class Checkers implements Game
         return ++moves != MOVES;
     }
 
-    public static GameFactory factory = new GameFactory()
-    {
+    public static GameFactory factory = new GameFactory() {
         @Override
         public Game getGame() {
             return new Checkers();
@@ -36,8 +32,7 @@ class Checkers implements Game
     };
 }
 
-class Chess implements Game
-{
+class Chess implements Game {
     public Chess() {
     }
 
@@ -50,8 +45,7 @@ class Chess implements Game
         return ++moves != MOVES;
     }
 
-    public static GameFactory factory = new GameFactory()
-    {
+    public static GameFactory factory = new GameFactory() {
         @Override
         public Game getGame() {
             return new Chess();
@@ -60,8 +54,7 @@ class Chess implements Game
 }
 
 
-public class Games
-{
+public class Games {
     public static void playGame(GameFactory gameFactory) {
         Game s = gameFactory.getGame();
         while (s.move())

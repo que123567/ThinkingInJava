@@ -4,14 +4,12 @@ package Chapter8;
  * p165
  * Created by smaug on 2017/4/21.
  */
-class Actor
-{
+class Actor {
     public void act() {
     }
 }
 
-class HappyActor extends Actor
-{
+class HappyActor extends Actor {
     @Override
     public void act() {
         super.act();
@@ -19,8 +17,7 @@ class HappyActor extends Actor
     }
 }
 
-class SadActor extends Actor
-{
+class SadActor extends Actor {
     @Override
     public void act() {
         super.act();
@@ -28,8 +25,7 @@ class SadActor extends Actor
     }
 }
 
-class Stage
-{
+class Stage {
     private Actor actor = new HappyActor();
 
     public void setChange() {
@@ -42,8 +38,7 @@ class Stage
 }
 
 
-public class Transmogrify
-{
+public class Transmogrify {
     public static void main(String[] args) {
         Stage stage = new Stage();
         stage.perform();
